@@ -1,0 +1,14 @@
+[
+  {
+    "name": "address",
+    "path": "/address",
+    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/address.vue",
+    "chunkName": "pages/address"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
