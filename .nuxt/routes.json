@@ -2,13 +2,29 @@
   {
     "name": "address",
     "path": "/address",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/address.vue",
-    "chunkName": "pages/address"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/address.vue",
+    "chunkName": "pages/address",
+    "_name": "_33393284"
+  },
+  {
+    "name": "home",
+    "path": "/home",
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/home.vue",
+    "chunkName": "pages/home",
+    "_name": "_6aaba4ff"
+  },
+  {
+    "name": "stores",
+    "path": "/stores",
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/stores.vue",
+    "chunkName": "pages/stores",
+    "_name": "_a04fdf5c"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/index.vue",
-    "chunkName": "pages/index"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3f063e62"
   }
 ]

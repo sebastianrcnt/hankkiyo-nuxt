@@ -4,5 +4,11 @@
   },
   "LazyModal": {
     "description": "Auto imported from components/Modal.vue"
+  },
+  "TopBar": {
+    "description": "Auto imported from components/TopBar.vue"
+  },
+  "LazyTopBar": {
+    "description": "Auto imported from components/TopBar.vue"
   }
 }

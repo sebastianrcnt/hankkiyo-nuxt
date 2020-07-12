@@ -1,10 +1,53 @@
 @mixin expanded {
   width: 100%;
-  hegiht: 100%;
+  height: 100%;
 }
 
-@mixin flex-container {
+@mixin expanded-horizontal {
+  width: 100%;
+}
+
+@mixin expanded-vertical {
+  height: 100%;
+}
+
+@mixin center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin flex($flex-direction, $align-itmes, $justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-itmes;
+  justify-content: $justify-content;
+}
+
+@mixin side-margin($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin vertical-margin($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+// Layouts
+@mixin top-bar($height) {
+  width: 100%;
+  height: $height;
+  @include flex(row, center, center);
+  position: sticky;
+  top: 0px;
+  // backdrop-filter: blur(5px);
+  background: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+@mixin content() {
+  @include expanded;
+  flex: 1;
+  overflow-y: scroll;
 }

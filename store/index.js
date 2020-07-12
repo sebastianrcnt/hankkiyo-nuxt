@@ -1,20 +1,22 @@
 import Vuex from 'vuex'
+import VuexPersistence from 'vuex-persist'
 
 const store = new Vuex.Store({
   state: {
-    firstAddress: '',
-    secondAddress: '',
+    primaryAddress: {},
+    secondaryAddress: '',
   },
   mutations: {
-    setFirstAddress(state, firstAddress) {
-      state.firstAddress = firstAddress
+    setPrimaryAddress(state, primaryAddress) {
+      state.primaryAddress = primaryAddress
     },
-    setSecondAddress(state, secondAddress) {
-      state.secondAddress = secondAddress
+    setSecondaryAddress(state, secondaryAddress) {
+      state.secondaryAddress = secondaryAddress
     },
   },
   actions: {},
   modules: {},
+  plugins: [new VuexPersistence().plugin],
 })
 
 export default function () {

@@ -10,8 +10,9 @@ import '../assets/scss/colors.scss'
 import '../assets/css/global.css'
 
 import _6f6c098b from '../layouts/default.vue'
+import _b14fe068 from '../layouts/withbottombar.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_withbottombar": sanitizeComponent(_b14fe068) }
 
 export default {
   render (h, props) {

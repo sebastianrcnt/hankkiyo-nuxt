@@ -2,7 +2,7 @@
   <div class="modal-filter" v-bind:class="{ show: visible }" @click="close()">
     <div class="modal" v-if="visible">
       <img v-bind:src="imgSrc" alt="boom" />
-      <span v-html="parsedMessage"></span>
+      <span v-html="parsedMessage" class="bounce"></span>
       <div class="close-button">확인</div>
     </div>
   </div>
@@ -37,7 +37,7 @@ export default {
 
   top: 0;
   left: 0;
-  @include flex-container;
+  @include center;
   z-index: -1;
 
   &.show {
@@ -92,6 +92,24 @@ export default {
     span {
       margin-top: 20px;
       line-height: 1.2rem;
+
+      &.bounce {
+        animation-name: bounce;
+        animation-duration: 0.2s;
+        animation-delay: 0.3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 8;
+        animation-direction: alternate;
+      }
+    }
+
+    @keyframes bounce {
+      from {
+        transform: scale(1, 1);
+      }
+      to {
+        transform: scale(1.2, 1.2);
+      }
     }
 
     .close-button {
@@ -105,7 +123,7 @@ export default {
       font-size: 15px;
       margin-top: 28px;
 
-      @include flex-container;
+      @include center;
     }
   }
 

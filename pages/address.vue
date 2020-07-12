@@ -1,56 +1,67 @@
 <template>
-  <div class="address">
+  <div class="container">
     <h1>주소를 입력해주세요</h1>
-    <div @click="setAddress()" class="search">
-      <span>{{ address || '건물명, 도로명 또는 지번으로 검색' }}</span>
+    <div class="primary-address" @click="promptDaumAddress()">
+      {{ primaryAddress.address || '건물명, 도로명 또는 지번으로 검색' }}
     </div>
     <input
-      class="second-address"
+      class="secondary-address"
       type="text"
-      v-model="detailedAddress"
-      v-bind:placeholder="detailedAddress || '상세주소 입력'"
-      v-on:change="setDetailedAddress()"
+      placeholder="상세주소 입력"
+      @input="handleSecondaryAddressFieldChange"
+      :value="secondaryAddress"
     />
-    <div
-      class="next-button"
-      @click="handleNextButtonClick()"
-      v-bind:class="{ active: isFilled }"
-    >
+    <button class="save-button" @click="handleSaveButtonClick()">
       저장하기
-    </div>
+    </button>
     <Modal
       v-bind:visible="isModalVisible"
       @close="hideModal()"
       imgSrc="images/angry-chicken.png"
       message="주소를 입력하세요 😠"
     />
+    <img
+      src="images/arrow-chicken-left.png"
+      alt=""
+      class="arrow-chicken-left"
+    />
   </div>
 </template>
 
 <script>
 import Modal from '../components/Modal'
+import { mapState } from 'vuex'
 
 export default {
-  data() {
-    return { detailedAddress: '', isModalVisible: false }
+  // asyncData({ store }) {
+  //   return {
+  //     primaryAddress: store.state.primaryAddress || '',
+  //     secondaryAddress: store.state.secondaryAddress || '',
+  //   }
+  // },
+  computed: {
+    ...mapState({
+      primaryAddress: (state) => state.primaryAddress,
+      secondaryAddress: (state) => state.secondaryAddress,
+    }),
   },
-  created() {
-    this.detailedAddress = this.$store.state.detailedAddress || ''
-  },
+  data: () => ({
+    isModalVisible: false,
+  }),
   methods: {
-    setAddress() {
+    promptDaumAddress() {
       new window.daum.Postcode({
         oncomplete: (data) => {
-          this.$store.commit('setAddress', data.address)
+          this.$store.commit('setPrimaryAddress', data)
         },
       }).open()
     },
-    setDetailedAddress() {
-      this.$store.commit('setDetailedAddress', this.detailedAddress)
+    handleSecondaryAddressFieldChange(event) {
+      this.$store.commit('setSecondaryAddress', event.target.value)
     },
-    handleNextButtonClick() {
-      if (this.isFilled) {
-        this.$router.push('/main')
+    handleSaveButtonClick() {
+      if (this.primaryAddress && this.secondaryAddress) {
+        this.$router.push('/home')
       } else {
         this.showModal()
       }
@@ -62,14 +73,6 @@ export default {
       this.isModalVisible = false
     },
   },
-  computed: {
-    address() {
-      return this.$store.state.address
-    },
-    isFilled() {
-      return !!(this.detailedAddress && this.address)
-    },
-  },
   components: {
     Modal,
   },
@@ -77,81 +80,76 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.address {
+.container {
   @include expanded;
-  padding: 0 25px;
-  margin-top: 100px;
+  @include flex(column, left, flex-start);
 
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-
-h1 {
-  font-size: 22px;
-}
-
-.search {
-  height: 46px;
-  background-color: rgba(128, 128, 128, 0.15);
-  border-radius: 5px;
-
-  margin-top: 25px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  /* padding: 0 12.27px; */
-
-  i {
-    color: #cecece;
+  & > * {
+    @include side-margin(25px);
   }
 
-  span {
-    margin-left: 28.31px;
-    color: #9a9a9a;
+  h1 {
+    font-size: 22px;
+    margin-top: 70px;
   }
-}
 
-input.second-address {
-  outline: none;
-  border: #cecece 1px solid;
-  border-radius: 5px;
-  padding: 10px;
-  color: #9a9a9a;
-  height: 46px;
-  -webkit-appearance: none;
-  &::placeholder {
+  .primary-address {
+    @include flex(row, center, center);
+    height: 46px;
+    background-color: rgba(128, 128, 128, 0.15);
+    border-radius: 5px;
+    margin-top: 25px;
     color: #9a9a9a;
   }
 
-  width: 100%;
-  margin-top: 15px;
+  input.secondary-address {
+    @include center;
 
-  @include flex-container;
-}
+    outline: none;
+    border: #cecece 1px solid;
+    border-radius: 5px;
+    color: #9a9a9a;
+    height: 46px;
+    text-align: center;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    &::placeholder {
+      color: #9a9a9a;
+    }
 
-.next-button {
-  @include flex-container;
-  font-size: 16px;
-  width: calc(100% - 52px);
-  height: 41px;
-  border-radius: 5px;
+    margin-top: 15px;
+  }
 
-  color: $mainColor;
-  background-color: white;
-  border: 1px solid $mainColor;
+  button.save-button {
+    @include center;
+    font-size: 16px;
+    width: calc(100% - 52px);
+    height: 41px;
+    border-radius: 5px;
+    outline: none;
 
-  transition: color 0.4s ease, background-color 0.4s ease;
+    color: $mainColor;
+    background-color: white;
+    border: 1px solid $mainColor;
 
-  position: absolute;
-  bottom: 30px;
+    transition: color 0.4s ease, background-color 0.4s ease;
 
-  &.active {
-    color: white;
-    background-color: $mainColor;
+    position: absolute;
+    bottom: 30px;
+
+    &.active {
+      color: white;
+      background-color: $mainColor;
+    }
+  }
+
+  img.arrow-chicken-left {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+
+    height: 50px;
+    object-fit: contain;
   }
 }
 </style>

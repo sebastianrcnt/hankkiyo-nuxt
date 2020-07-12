@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    Some Layout
+    <img
+      src="images/landing-page.png"
+      alt=""
+      @click="$router.push('/address')"
+    />
   </div>
 </template>
 
@@ -8,4 +12,25 @@
 export default {}
 </script>
 
-<style></style>
+<style scoped lang="scss">
+.container {
+  img {
+    width: 100%;
+  }
+
+  .frame {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: brightness(0%);
+
+    @include center;
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+  }
+}
+</style>
