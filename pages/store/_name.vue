@@ -2,7 +2,7 @@
   <div class="container">
     <div class="top-bar">
       <span>{{ store.name }}</span>
-      <i class="fa fa-chevron-left"></i>
+      <i class="fa fa-chevron-left" @click="$router.push('/home')"></i>
     </div>
     <!-- <div v-seen="loading" class="loading">
       <Spinner></Spinner>
@@ -31,6 +31,7 @@
       @click="handleOrderButtonClick()"
     >
       주문하기
+      <span>{{ insertCommas(total) }} 원</span>
     </button>
   </div>
 </template>
@@ -56,6 +57,18 @@ export default {
   computed: {
     loading() {
       return !!this.store
+    },
+    total() {
+      let total = 0
+      this.cart.forEach((menuAbbr) => {
+        let menu = this.store.menus.find((m) => {
+          return m.abbr === menuAbbr
+        })
+        if (menu.price) {
+          total += menu.price
+        }
+      })
+      return total
     },
   },
   methods: {
@@ -221,6 +234,12 @@ export default {
     &.active {
       background-color: $mainColor;
       color: white;
+    }
+
+    span {
+      color: white;
+      position: absolute;
+      right: 10px;
     }
   }
 }

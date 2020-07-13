@@ -3,7 +3,7 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'universal',
+  mode: 'spa',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -90,9 +90,9 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {
-    // vendor: ['vue2-circle-progress'],
-  },
+  // build: {
+  //   vendor: ['vuex-persist'],
+  // },
   styleResources: {
     scss: ['./assets/scss/*.scss'],
   },
