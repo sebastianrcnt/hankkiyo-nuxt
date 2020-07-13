@@ -33,12 +33,6 @@ import Modal from '../components/Modal'
 import { mapState } from 'vuex'
 
 export default {
-  // asyncData({ store }) {
-  //   return {
-  //     primaryAddress: store.state.primaryAddress || '',
-  //     secondaryAddress: store.state.secondaryAddress || '',
-  //   }
-  // },
   computed: {
     ...mapState({
       primaryAddress: (state) => state.primaryAddress,
