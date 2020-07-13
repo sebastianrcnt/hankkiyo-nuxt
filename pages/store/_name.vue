@@ -92,7 +92,7 @@ export default {
       const packet = JSON.stringify(
         this.cart.map((menuAbbr) => {
           return {
-            menu: menuAbbr,
+            menu_abbr: menuAbbr,
             destination: this.$store.getters.fullAddress,
           }
         })
