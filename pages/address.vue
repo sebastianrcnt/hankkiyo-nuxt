@@ -128,7 +128,7 @@ export default {
 
     transition: color 0.4s ease, background-color 0.4s ease;
 
-    position: absolute;
+    position: fixed;
     bottom: 30px;
 
     &.active {

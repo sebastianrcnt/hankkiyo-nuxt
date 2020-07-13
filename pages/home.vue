@@ -3,12 +3,16 @@
     <top-bar />
     <div class="banner">배너(삽입예정)</div>
     <div class="categories">
-      <template v-for="row in [0, 1, 2]">
-        <div class="category-row" :key="row">
-          <template v-for="col in [0, 1, 2]">
-            <div class="category-item" :key="col">
-              <img :src="categories[row * 3 + col].imgSrc" alt="" />
-              <span>{{ categories[row * 3 + col].name }}</span>
+      <template v-for="(row, rowNumber) in categoryRows">
+        <div class="category-row" :key="rowNumber">
+          <template v-for="(category, index) in row">
+            <div
+              class="category-item"
+              :key="index"
+              @click="goToCategory(category.name)"
+            >
+              <img :src="category.imgSrc" alt="" />
+              <span>{{ category.name }}</span>
             </div>
           </template>
         </div>
@@ -19,22 +23,56 @@
 
 <script>
 import { mapState } from 'vuex'
-import { categories } from '../temp/data'
 import TopBar from '../components/TopBar'
+import axios from 'axios'
 
 export default {
-  async asyncData() {
+  data() {
     return {
-      categories,
+      categories: [],
     }
+  },
+  created() {
+    axios
+      .get('/api/categories/')
+      .then(({ data }) => {
+        this.categories = data
+      })
+      .catch((err) => {
+        console.log(data)
+      })
   },
   computed: {
     ...mapState({
       primaryAddress: (store) => store.primaryAddress,
     }),
+    categoryRows() {
+      let result = []
+      for (
+        let rowNumber = 0;
+        rowNumber < Math.floor(this.categories.length / 3);
+        rowNumber++
+      ) {
+        result.push(
+          this.categories.filter((category, index) => {
+            // rowNumber = 1 => return item 3, 4, 5
+            return rowNumber * 3 <= index && index < rowNumber * 3 + 3
+          })
+        )
+      }
+      return result
+    },
+  },
+  methods: {
+    goToCategory(name) {
+      this.$router.push({
+        path: '/categories',
+        query: { category: name },
+      })
+    },
   },
   layout: 'withbottombar',
-  components: [TopBar],
+  components: { TopBar },
 }
 </script>
 

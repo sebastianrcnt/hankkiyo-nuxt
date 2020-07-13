@@ -1,9 +1,8 @@
 <template>
-  <div>
+  <div class="root">
     <Nuxt class="content" />
-
     <div class="bottom-bar">
-      <div class="item">
+      <div class="item" @click="$router.push('/home')">
         <span class="material-icons">home</span>
         <span>홈</span>
       </div>

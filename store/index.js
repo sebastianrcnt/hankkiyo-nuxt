@@ -17,6 +17,14 @@ const store = new Vuex.Store({
   actions: {},
   modules: {},
   plugins: [new VuexPersistence().plugin],
+  getters: {
+    fullAddress(store) {
+      return store.primaryAddress.address + ' ' + store.secondaryAddress
+    },
+    isAddressSet(store) {
+      return !!(store.primaryAddress && secondaryAddress)
+    },
+  },
 })
 
 export default function () {

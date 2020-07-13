@@ -63,6 +63,14 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
+  proxy: {
+    '/api': {
+      target: 'http://3.34.210.157:8000/',
+      // pathRewrite: {
+      //   '^/api': '/',
+      // },
+    },
+  },
   buildModules: [],
   /*
    ** Nuxt.js modules
@@ -70,6 +78,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     '@nuxtjs/style-resources',
   ],
   /*
@@ -81,7 +90,9 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    // vendor: ['vue2-circle-progress'],
+  },
   styleResources: {
     scss: ['./assets/scss/*.scss'],
   },
