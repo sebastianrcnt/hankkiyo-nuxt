@@ -9,9 +9,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: 'server',
-  server: {
-    host: '',
-  },
+  // server: {
+  //   host: '',
+  // },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
