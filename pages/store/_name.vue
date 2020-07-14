@@ -111,7 +111,7 @@ export default {
           alert(`🐔죄송합니다 고객님,
 아직 준비 중인 서비스 입니다.🙇‍♀️
 
-OK 버튼을 통해 설문에 참여해주시면 스타벅스 기프티콘을 포함한
+OK 버튼을 통해 설문에 참여해주시면 스타벅스 기프티콘을 포함한 
 ✨3가지 혜택을 드리겠습니다.`)
           window.location = `https://forms.gle/Cr4xSvNfGtucAYBX7`
         })
