@@ -49,7 +49,7 @@ export default {
     }
   },
   created() {
-    axios.get('/api/stores').then(({ data }) => {
+    axios.get(process.env.API_URL + '/api/stores').then(({ data }) => {
       const stores = data
       this.store = stores.find((store) => this.$route.params.name == store.name)
     })

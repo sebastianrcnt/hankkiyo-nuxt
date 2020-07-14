@@ -44,7 +44,7 @@ export default {
   },
   created() {
     axios
-      .get('/api/categories/')
+      .get(process.env.API_URL + '/api/categories/')
       .then(({ data }) => {
         this.categories = data
       })
@@ -53,7 +53,7 @@ export default {
       })
 
     axios
-      .get('/api/stores/')
+      .get(process.env.API_URL + '/api/stores/')
       .then(({ data }) => {
         this.stores = data
       })

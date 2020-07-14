@@ -34,7 +34,7 @@ export default {
   },
   created() {
     axios
-      .get('/api/categories/')
+      .get(process.env.API_URL + '/api/categories/')
       .then(({ data }) => {
         this.categories = data
       })

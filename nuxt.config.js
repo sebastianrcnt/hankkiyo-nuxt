@@ -66,14 +66,14 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  proxy: {
-    '/api': {
-      target: 'https://hankkiyo.site/',
-      // pathRewrite: {
-      //   '^/api': '/',
-      // },
-    },
-  },
+  // proxy: {
+  //   '/api': {
+  //     target: 'https://hankkiyo.site/',
+  //     // pathRewrite: {
+  //     //   '^/api': '/',
+  //     // },
+  //   },
+  // },
   buildModules: [],
   /*
    ** Nuxt.js modules
@@ -81,7 +81,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/proxy',
+    // '@nuxtjs/proxy',
     '@nuxtjs/style-resources',
   ],
   /*
