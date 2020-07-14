@@ -1,5 +1,5 @@
 <template>
-  <div class="top-bar" @click="$router.push('/address')">
+  <div class="top-bar" @click="$router.push('/address?hasBackButton=true')">
     <span>{{
       $store.state.primaryAddress.address || '주소를 입력해 주세요'
     }}</span>

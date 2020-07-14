@@ -3,12 +3,12 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _2c6843fa = () => interopDefault(import('../pages/address.vue' /* webpackChunkName: "pages/address" */))
-const _4a6a59dd = () => interopDefault(import('../pages/categories.vue' /* webpackChunkName: "pages/categories" */))
-const _f30c7c40 = () => interopDefault(import('../pages/home.vue' /* webpackChunkName: "pages/home" */))
-const _109278f3 = () => interopDefault(import('../pages/stores.vue' /* webpackChunkName: "pages/stores" */))
-const _0ec00f4b = () => interopDefault(import('../pages/store/_name.vue' /* webpackChunkName: "pages/store/_name" */))
-const _c60884be = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _33393284 = () => interopDefault(import('../pages/address.vue' /* webpackChunkName: "pages/address" */))
+const _144729bc = () => interopDefault(import('../pages/categories.vue' /* webpackChunkName: "pages/categories" */))
+const _6aaba4ff = () => interopDefault(import('../pages/home.vue' /* webpackChunkName: "pages/home" */))
+const _a04fdf5c = () => interopDefault(import('../pages/stores.vue' /* webpackChunkName: "pages/stores" */))
+const _ff058968 = () => interopDefault(import('../pages/store/_name.vue' /* webpackChunkName: "pages/store/_name" */))
+const _3f063e62 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -28,27 +28,27 @@ export const routerOptions = {
 
   routes: [{
     path: "/address",
-    component: _2c6843fa,
+    component: _33393284,
     name: "address"
   }, {
     path: "/categories",
-    component: _4a6a59dd,
+    component: _144729bc,
     name: "categories"
   }, {
     path: "/home",
-    component: _f30c7c40,
+    component: _6aaba4ff,
     name: "home"
   }, {
     path: "/stores",
-    component: _109278f3,
+    component: _a04fdf5c,
     name: "stores"
   }, {
     path: "/store/:name?",
-    component: _0ec00f4b,
+    component: _ff058968,
     name: "store-name"
   }, {
     path: "/",
-    component: _c60884be,
+    component: _3f063e62,
     name: "index"
   }],
 

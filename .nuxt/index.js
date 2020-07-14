@@ -12,8 +12,8 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_cc2d1f72 from 'nuxt_plugin_plugin_cc2d1f72' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_axios_5896e446 from 'nuxt_plugin_axios_5896e446' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_plugin_6586c634 from 'nuxt_plugin_plugin_6586c634' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_axios_90331e08 from 'nuxt_plugin_axios_90331e08' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_vuexpersist_13f465a2 from 'nuxt_plugin_vuexpersist_13f465a2' // Source: ../plugins/vuex-persist (mode: 'client')
 
 // Component: <ClientOnly>
@@ -57,7 +57,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"한끼요","script":[{"src":"https:\u002F\u002Ft1.daumcdn.net\u002Fmapjsapi\u002Fbundle\u002Fpostcode\u002Fprod\u002Fpostcode.v2.js"}],"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=no"},{"hid":"description","name":"description","content":"## Build Setup"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Fimages\u002Frider-chicken.png"},{"rel":"stylesheet","href":"https:\u002F\u002Fmaxcdn.bootstrapcdn.com\u002Ffont-awesome\u002F4.7.0\u002Fcss\u002Ffont-awesome.min.css"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Ficon?family=Material+Icons"}],"style":[]},
+    head: {"title":"한끼요","script":[{"src":"https:\u002F\u002Ft1.daumcdn.net\u002Fmapjsapi\u002Fbundle\u002Fpostcode\u002Fprod\u002Fpostcode.v2.js"}],"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Fimages\u002Frider-chicken.png"},{"rel":"stylesheet","href":"https:\u002F\u002Fmaxcdn.bootstrapcdn.com\u002Ffont-awesome\u002F4.7.0\u002Fcss\u002Ffont-awesome.min.css"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Ficon?family=Material+Icons"}],"style":[]},
 
     store,
     router,
@@ -186,12 +186,12 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_cc2d1f72 === 'function') {
-    await nuxt_plugin_plugin_cc2d1f72(app.context, inject)
+  if (typeof nuxt_plugin_plugin_6586c634 === 'function') {
+    await nuxt_plugin_plugin_6586c634(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_5896e446 === 'function') {
-    await nuxt_plugin_axios_5896e446(app.context, inject)
+  if (typeof nuxt_plugin_axios_90331e08 === 'function') {
+    await nuxt_plugin_axios_90331e08(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_vuexpersist_13f465a2 === 'function') {

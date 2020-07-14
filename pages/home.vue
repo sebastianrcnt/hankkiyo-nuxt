@@ -39,7 +39,7 @@ export default {
         this.categories = data
       })
       .catch((err) => {
-        console.log(data)
+        console.log(err)
       })
   },
   computed: {

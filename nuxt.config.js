@@ -9,6 +9,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: 'server',
+  server: {
+    host: '',
+  },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -27,11 +30,11 @@ export default {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1, user-scalable=no',
       },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || '',
-      },
+      // {
+      //   hid: 'description',
+      //   name: 'description',
+      //   content: process.env.npm_package_description || '',
+      // },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/images/rider-chicken.png' },
@@ -65,7 +68,7 @@ export default {
    */
   proxy: {
     '/api': {
-      target: 'http://3.34.210.157:8000/',
+      target: 'https://hankkiyo.site/',
       // pathRewrite: {
       //   '^/api': '/',
       // },

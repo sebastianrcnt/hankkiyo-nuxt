@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <i
+      v-if="$route.query.hasBackButton"
+      class="fa fa-angle-left back-button"
+      @click="$router.push('/home')"
+    ></i>
     <h1>주소를 입력해주세요</h1>
     <div class="primary-address" @click="promptDaumAddress()">
       {{ primaryAddress.address || '건물명, 도로명 또는 지번으로 검색' }}
@@ -17,7 +22,7 @@
     <Modal
       v-bind:visible="isModalVisible"
       @close="hideModal()"
-      imgSrc="images/angry-chicken.png"
+      imgSrc="images/angry-chicotken.png"
       message="주소를 입력하세요 😠"
     />
     <img
@@ -77,6 +82,16 @@ export default {
 .container {
   @include expanded;
   @include flex(column, left, flex-start);
+
+  i.back-button {
+    position: fixed;
+    top: 18px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    color: grey;
+  }
 
   & > * {
     @include side-margin(25px);

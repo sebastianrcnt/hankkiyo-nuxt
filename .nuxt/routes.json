@@ -2,37 +2,43 @@
   {
     "name": "address",
     "path": "/address",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/address.vue",
-    "chunkName": "pages/address"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/address.vue",
+    "chunkName": "pages/address",
+    "_name": "_33393284"
   },
   {
     "name": "categories",
     "path": "/categories",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/categories.vue",
-    "chunkName": "pages/categories"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/categories.vue",
+    "chunkName": "pages/categories",
+    "_name": "_144729bc"
   },
   {
     "name": "home",
     "path": "/home",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/home.vue",
-    "chunkName": "pages/home"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/home.vue",
+    "chunkName": "pages/home",
+    "_name": "_6aaba4ff"
   },
   {
     "name": "stores",
     "path": "/stores",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/stores.vue",
-    "chunkName": "pages/stores"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/stores.vue",
+    "chunkName": "pages/stores",
+    "_name": "_a04fdf5c"
   },
   {
     "name": "store-name",
     "path": "/store/:name?",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/store/_name.vue",
-    "chunkName": "pages/store/_name"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/store/_name.vue",
+    "chunkName": "pages/store/_name",
+    "_name": "_ff058968"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/index.vue",
-    "chunkName": "pages/index"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3f063e62"
   }
 ]
