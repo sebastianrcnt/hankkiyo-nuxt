@@ -43,8 +43,8 @@ export default {
     }
   },
   created() {
-    axios
-      .get(process.env.API_URL + '/api/categories/')
+    this.$axios
+      .$get('/api/categories/')
       .then(({ data }) => {
         this.categories = data
       })
@@ -52,8 +52,8 @@ export default {
         console.error(err)
       })
 
-    axios
-      .get(process.env.API_URL + '/api/stores/')
+    this.$axios
+      .$get('/api/stores/')
       .then(({ data }) => {
         this.stores = data
       })

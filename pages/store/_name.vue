@@ -49,7 +49,7 @@ export default {
     }
   },
   created() {
-    axios.get(process.env.API_URL + '/api/stores').then(({ data }) => {
+    this.$axios.$get('/api/stores').then(({ data }) => {
       const stores = data
       this.store = stores.find((store) => this.$route.params.name == store.name)
     })
@@ -97,8 +97,8 @@ export default {
           }
         })
       )
-      axios
-        .post('/api/orders/', packet, {
+      this.$axios
+        .$post('/api/orders/', packet, {
           headers: { 'Content-Type': 'application/json' },
         })
         .then((result) => {

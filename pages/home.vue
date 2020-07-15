@@ -24,7 +24,6 @@
 <script>
 import { mapState } from 'vuex'
 import TopBar from '../components/TopBar'
-import axios from 'axios'
 
 export default {
   data() {
@@ -33,8 +32,8 @@ export default {
     }
   },
   created() {
-    axios
-      .get(process.env.API_URL + '/api/categories/')
+    this.$axios
+      .$get('/api/categories/')
       .then(({ data }) => {
         this.categories = data
       })
