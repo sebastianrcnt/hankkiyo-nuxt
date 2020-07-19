@@ -1,4 +1,7 @@
-/node_modules
+node_modules
 .vercel
-/.nuxt
 .env
+
+npm-debug.log
+.nuxt
+dist
