@@ -15,7 +15,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_plugin_6586c634 from 'nuxt_plugin_plugin_6586c634' // Source: ./components/plugin.js (mode: 'all')
 import nuxt_plugin_axios_90331e08 from 'nuxt_plugin_axios_90331e08' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_googleanalytics_1b59b1aa from 'nuxt_plugin_googleanalytics_1b59b1aa' // Source: ./google-analytics.js (mode: 'client')
-import nuxt_plugin_vuexpersist_13f465a2 from 'nuxt_plugin_vuexpersist_13f465a2' // Source: ../plugins/vuex-persist (mode: 'client')
+import nuxt_plugin_vuexpersist_13f465a2 from 'nuxt_plugin_vuexpersist_13f465a2' // Source: ../plugins/vuex-persist (mode: 'all')
 import nuxt_plugin_ga_fb0a2534 from 'nuxt_plugin_ga_fb0a2534' // Source: ../plugins/ga.js (mode: 'client')
 
 // Component: <ClientOnly>
@@ -200,7 +200,7 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_googleanalytics_1b59b1aa(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_vuexpersist_13f465a2 === 'function') {
+  if (typeof nuxt_plugin_vuexpersist_13f465a2 === 'function') {
     await nuxt_plugin_vuexpersist_13f465a2(app.context, inject)
   }
 

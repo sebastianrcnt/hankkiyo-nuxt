@@ -150,7 +150,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {}
+      env: {"GOOGLE_ANALYTICS_ID":"UA-172492077-1"}
     }
     // Only set once
     if (!process.static && context.req) {

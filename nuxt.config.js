@@ -58,7 +58,7 @@ export default {
    ** https://nuxtjs.org/guide/plugins
    */
   plugins: [
-    { src: '~/plugins/vuex-persist', ssr: false },
+    { src: '~/plugins/vuex-persist', ssr: true },
     { src: '~plugins/ga.js', mode: 'client' },
   ],
   /*
@@ -80,6 +80,9 @@ export default {
   buildModules: ['@nuxtjs/google-analytics'],
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID,
+  },
+  env: {
+    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
   },
   /*
    ** Nuxt.js modules
