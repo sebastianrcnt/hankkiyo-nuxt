@@ -74,7 +74,10 @@ export default {
   //     // },
   //   },
   // },
-  buildModules: [],
+  buildModules: ['@nuxtjs/google-analytics'],
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+  },
   /*
    ** Nuxt.js modules
    */

@@ -2,50 +2,43 @@
   {
     "name": "address",
     "path": "/address",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/address.vue",
-    "chunkName": "pages/address",
-    "_name": "_2c6843fa"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/address.vue",
+    "chunkName": "pages/address"
   },
   {
     "name": "categories",
     "path": "/categories",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/categories.vue",
-    "chunkName": "pages/categories",
-    "_name": "_4a6a59dd"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/categories.vue",
+    "chunkName": "pages/categories"
   },
   {
     "name": "history",
     "path": "/history",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/history.vue",
-    "chunkName": "pages/history",
-    "_name": "_50ded6a3"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/history.vue",
+    "chunkName": "pages/history"
   },
   {
     "name": "home",
     "path": "/home",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/home.vue",
-    "chunkName": "pages/home",
-    "_name": "_f30c7c40"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/home.vue",
+    "chunkName": "pages/home"
   },
   {
     "name": "stores",
     "path": "/stores",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/stores.vue",
-    "chunkName": "pages/stores",
-    "_name": "_109278f3"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/stores.vue",
+    "chunkName": "pages/stores"
   },
   {
     "name": "store-name",
     "path": "/store/:name?",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/store/_name.vue",
-    "chunkName": "pages/store/_name",
-    "_name": "_0ec00f4b"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/store/_name.vue",
+    "chunkName": "pages/store/_name"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_c60884be"
+    "component": "/Users/sebastianrcnt/hankkiyo-nuxt/pages/index.vue",
+    "chunkName": "pages/index"
   }
 ]
