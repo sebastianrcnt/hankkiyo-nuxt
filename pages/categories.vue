@@ -45,7 +45,7 @@ export default {
   created() {
     this.$axios
       .$get('/api/categories/')
-      .then(({ data }) => {
+      .then((data) => {
         this.categories = data
       })
       .catch((err) => {
@@ -54,7 +54,7 @@ export default {
 
     this.$axios
       .$get('/api/stores/')
-      .then(({ data }) => {
+      .then((data) => {
         this.stores = data
       })
       .catch((err) => {

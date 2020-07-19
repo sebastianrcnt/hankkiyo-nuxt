@@ -6,7 +6,7 @@
         <span class="material-icons">home</span>
         <span>홈</span>
       </div>
-      <div class="item">
+      <div class="item" @click="$router.push('/history')">
         <span class="material-icons">article</span>
         <span>주문내역</span>
       </div>

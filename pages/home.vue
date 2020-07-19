@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <top-bar />
-    <div class="banner">배너(삽입예정)</div>
+    <img src="https://i.ibb.co/0Mf2mvB/banner.png" alt="배너" class="banner" />
     <div class="categories">
       <template v-for="(row, rowNumber) in categoryRows">
         <div class="category-row" :key="rowNumber">
@@ -34,7 +34,7 @@ export default {
   created() {
     this.$axios
       .$get('/api/categories/')
-      .then(({ data }) => {
+      .then((data) => {
         this.categories = data
       })
       .catch((err) => {
@@ -81,9 +81,11 @@ export default {
   @include flex(column, flex-start, flex-start);
 
   .banner {
-    width: 100%;
-    height: 192px;
-    background: #40404069;
+    align-self: center;
+    margin-top: 15px;
+    width: 85%;
+    /* height: 192px; */
+    object-fit: cover;
 
     @include center;
   }

@@ -49,8 +49,9 @@ export default {
     }
   },
   created() {
-    this.$axios.$get('/api/stores').then(({ data }) => {
+    this.$axios.$get('/api/stores/').then((data) => {
       const stores = data
+      console.log(data)
       this.store = stores.find((store) => this.$route.params.name == store.name)
     })
   },
