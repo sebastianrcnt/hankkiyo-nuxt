@@ -5,6 +5,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _2c6843fa = () => interopDefault(import('../pages/address.vue' /* webpackChunkName: "pages/address" */))
 const _4a6a59dd = () => interopDefault(import('../pages/categories.vue' /* webpackChunkName: "pages/categories" */))
+const _50ded6a3 = () => interopDefault(import('../pages/history.vue' /* webpackChunkName: "pages/history" */))
 const _f30c7c40 = () => interopDefault(import('../pages/home.vue' /* webpackChunkName: "pages/home" */))
 const _109278f3 = () => interopDefault(import('../pages/stores.vue' /* webpackChunkName: "pages/stores" */))
 const _0ec00f4b = () => interopDefault(import('../pages/store/_name.vue' /* webpackChunkName: "pages/store/_name" */))
@@ -34,6 +35,10 @@ export const routerOptions = {
     path: "/categories",
     component: _4a6a59dd,
     name: "categories"
+  }, {
+    path: "/history",
+    component: _50ded6a3,
+    name: "history"
   }, {
     path: "/home",
     component: _f30c7c40,

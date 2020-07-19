@@ -14,6 +14,13 @@
     "_name": "_4a6a59dd"
   },
   {
+    "name": "history",
+    "path": "/history",
+    "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/history.vue",
+    "chunkName": "pages/history",
+    "_name": "_50ded6a3"
+  },
+  {
     "name": "home",
     "path": "/home",
     "component": "/Users/sebastianjeong/Development/Web/hankkiyo-nuxt/pages/home.vue",
