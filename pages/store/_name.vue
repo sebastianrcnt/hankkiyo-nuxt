@@ -6,9 +6,9 @@
     </div>
     <!-- <div v-seen="loading" class="loading">
       <Spinner></Spinner>
-    </div> -->
+    </div>-->
     <div class="store-image">
-      <img :src="store.imgSrc" alt="" />
+      <img :src="store.imgSrc" alt />
     </div>
     <h1 class="store-title">{{ store.name }}</h1>
     <div class="store-menus">
@@ -18,10 +18,8 @@
           <div class="checkbox" :class="{ active: cart.includes(menu.abbr) }">
             <i class="fa fa-check"></i>
           </div>
-          <span class="menu-name">
-            {{ menu.name }}
-          </span>
-          <span class="menu-price"> + {{ insertCommas(menu.price) }} 원 </span>
+          <span class="menu-name">{{ menu.name }}</span>
+          <span class="menu-price">+ {{ insertCommas(menu.price) }} 원</span>
         </div>
       </template>
     </div>
@@ -112,7 +110,7 @@ export default {
           alert(`🐔죄송합니다 고객님,
 아직 준비 중인 서비스 입니다.🙇‍♀️
 
-OK 버튼을 통해 설문에 참여해주시면 스타벅스 기프티콘을 포함한 
+설문에 참여해주시면 스타벅스 기프티콘을 포함한 
 ✨3가지 혜택을 드리겠습니다.`)
           window.location = `https://forms.gle/Cr4xSvNfGtucAYBX7`
         })
