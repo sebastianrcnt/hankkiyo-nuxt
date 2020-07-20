@@ -6,9 +6,10 @@
       @click="$router.push('/home')"
     ></i>
     <h1>주소를 입력해주세요</h1>
-    <div class="primary-address" @click="promptDaumAddress()">
-      {{ primaryAddress.address || '건물명, 도로명 또는 지번으로 검색' }}
-    </div>
+    <div
+      class="primary-address"
+      @click="promptDaumAddress()"
+    >{{ primaryAddress.address || '건물명, 도로명 또는 지번으로 검색' }}</div>
     <input
       class="secondary-address"
       type="text"
@@ -16,20 +17,14 @@
       @input="handleSecondaryAddressFieldChange"
       :value="secondaryAddress"
     />
-    <button class="save-button" @click="handleSaveButtonClick()">
-      저장하기
-    </button>
+    <button class="save-button" @click="handleSaveButtonClick()">저장하기</button>
     <Modal
       v-bind:visible="isModalVisible"
       @close="hideModal()"
-      imgSrc="images/angry-chicotken.png"
+      imgSrc="images/angry-chicken.png"
       message="주소를 입력하세요 😠"
     />
-    <img
-      src="images/arrow-chicken-left.png"
-      alt=""
-      class="arrow-chicken-left"
-    />
+    <img src="images/arrow-chicken-left.png" alt class="arrow-chicken-left" />
   </div>
 </template>
 
