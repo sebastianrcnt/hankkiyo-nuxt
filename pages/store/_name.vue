@@ -112,7 +112,8 @@ export default {
 
 설문에 참여해주시면 스타벅스 기프티콘을 포함한 
 ✨3가지 혜택을 드리겠습니다.`)
-          window.location = `https://forms.gle/Cr4xSvNfGtucAYBX7`
+          // window.location = `https://forms.gle/Cr4xSvNfGtucAYBX7`
+          window.location = `https://forms.gle/sD6h1LcREAuvocrk7`
         })
       console.log(packet)
     },
